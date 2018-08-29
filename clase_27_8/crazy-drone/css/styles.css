@@ -1,0 +1,50 @@
+@keyframes guidoTraeMorfi {
+  from {
+    background: #3498db;
+  }
+  25% {
+    background: #27ae60;
+  }
+  50% {
+    background: #9b59b6;
+  }
+  75% {
+    background: #c0392b;
+  }
+  to {
+    background: #f39c12;
+  }
+}
+
+body {
+  animation: guidoTraeMorfi 10s infinite alternate;
+  background: #3498db;
+}
+
+#drone {
+  background: url("../img/drone.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  height: 58px;
+  left: 35%;
+  position: absolute;
+  top: 148px;
+  transition: all 0.5s ease-out;
+  width: 150px;
+  z-index: 1;
+}
+
+#piedra{
+  background-image:url('../img/stone.png');background-repeat:no-repeat;background-size:cover;width:80px;height:80px;position:absolute;top:50%;left:50%;
+}
+
+#pilot {
+  background: url("../img/pilot.png");
+  background-size: cover;
+  bottom: 0;
+  height: 100px;
+  left: 150px;
+  position: fixed;
+  width: 100px;
+  z-index: 2;
+}
