@@ -15,8 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
 
     <link href="css/inputs.min.css" rel="stylesheet">
+
+    
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+
 
   </head>
 
@@ -73,6 +79,10 @@
               <i class="fab fa-github"></i>
             </a>
            </div>
+        
+           <p>&nbsp;</p>
+           <hr />
+           <p><small>Conocés el Konami Code? Probalo en este sitio! ↑ ↑ ↓ ↓ ← → ← → B A</small></p>
         </div>
       </section>
 
@@ -89,8 +99,9 @@
          <p>El proceder es: El elemento file abre un elemento para elegir uno (o múltiples, si se incluye el atributo <i>Multiple</i> dentro del picker, y de acuerdo a esos archivos y el botón "Submit" procede a activar el proceso seleccionado por el "post"del formulario.</p>
          <p>&nbsp;</p> 
          <h3 class="mb-3">Atributos modificables</h3>
-         <ul><li><span class="boxed">Multiple</span> como parametro para múltiples archivos. (No agregar si es solo uno)</li>
-        <li><span class="boxed">Size</span> - Seguido por valor numérico integer </li></ul> </div>
+         <ul class="attributes"><li><span class="boxed">Multiple</span> como parametro para múltiples archivos. (No agregar si es solo uno)</li>
+        <li><span class="boxed">Size</span> - Seguido por valor numérico integer </li>
+      <li><span class="boxed">Accept</span> - Qué tipos de archivos está dispuesto a aceptar el formulario (<code>accept="file_extension|audio/*|video/*|image/*|media_type")</code>. Acepta todos los tipos de archivo <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">reconocidos por IANA</a>.</li></ul> </div>
       </section>
 
       <hr class="m-0">
@@ -103,19 +114,19 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Subir un archivo</h3>
               <hr />
-              <form action="http://jkorpela.fi/cgi-bin/echo.cgi"
+              <form action="#"
 enctype="multipart/form-data" method="post">
 <p>
-Por favor elija un archivo:</p>
+Por favor elija un archivo de audio, video o imagen:</p>
 <p>
-  <input type="file" name="datafile" multiple>
+  <input type="file" name="datafile" id="uploadedFile" accept="file_extension|audio/*|video/*|image/*|media_type" multiple onchange="fileUpload()">
 </p>
 <div>
 <input type="submit" value="Send" onclick="alert('Archivo subido!')">
 <input type="reset" value="Reset">
 </div>
 </form>
-
+<p id="demo"></p>
             </div>
           </div>
 <div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -136,12 +147,11 @@ Por favor elija un archivo:</p>
           <h2 class="mb-5">Ejemplos</h2>
 
           <div class="ejemplos d-flex flex-column flex-md-row mb-5">
-              <div><img src="img/inputfile-ex-1-button.png"></div>
-              <div><img src="img/inputfile-ex-1-button.png"></div>
-              <div><img src="img/inputfile-ex-1-button.png"></div>
-              <div><img src="img/inputfile-ex-1-button.png"></div>
-              <div><img src="img/inputfile-ex-1-button.png"></div>
-              <div><img src="img/inputfile-ex-1-button.png"></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-1-lightbox.png"><img src="img/inputfile-ex-1-button.png"></a><br /><p class="boxed">Dropbox</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-2-lightbox.gif"><img src="img/inputfile-ex-2-button.png"></a><br /><p class="boxed">Gmail</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-3-lightbox.gif"><img src="img/inputfile-ex-3-button.png"></a><br /><p class="boxed">MDBootstrap.com</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-4-lightbox.gif"><img src="img/inputfile-ex-4-button.png"></a><br /><p class="boxed">Twitter</p></div>
+            
             
              </div>
           
@@ -155,125 +165,74 @@ Por favor elija un archivo:</p>
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber">
         <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
+          <h1 class="mb-0">INPUT
+            <span class="text-primary">NUMBER</span>
+          </h1>
+          <div class="subheading mb-5">Haga operaciones numéricas por medio de un formulario.
+          </div>
+          <p class="lead mb-5">Input Number consiste en un input de tipo numérico, sea con un principio y un fin establecido, o un valor libre. (Cualquier elemento es válido siempre y cuando sea un elemento numérico.)</p>
+         <h3 class="mb-3">Atributos modificables</h3>
+         <ul class="attributes"><li><span class="boxed">Min</span> como valor numérico mínimo.</li>
+        <li><span class="boxed">Max</span> como valor numérico máximo. </li>
+      <li><span class="boxed">Step</span> - La propiedad step permite el aumento o disminución de un número incrementalmente por valores (por ejemplo, un valor <code>step="10"</code> permitiría agregar o quitar números de a 10 por vez.)</li></ul> </div>
+      </section>
 
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-angular"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-react"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-node-js"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-sass"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-less"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-wordpress"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-gulp"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-grunt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-npm"></i>
-            </li>
-          </ul>
+      <hr class="m-0">
 
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber-imp">
+        <div class="my-auto">
+          <h2 class="mb-5">Ejemplo de Implementación</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <hr />
+              <form action="#"
+enctype="multipart/form-data" method="post">
+<p>
+Convertidor, de centímetros a Pulgadas:</p><p>
+<input id="inputcm" type="number" placeholder="cm" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Pulgadas: <span id="outputInches"></span></p></p>
+<div>
+<input type="reset" value="Reset">
+</div>
+</form>
+<p id="demo"></p>
+            </div>
+          </div>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Cómo implementar</h3>
+<p>&nbsp;</p>
+<script src="https://gist.github.com/gusma/bd8a0f924f470509c3b0bc45cf1e8240.js"></script>
+              
+</div></div>          
         </div>
       </section>
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-        </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-          <h2 class="mb-5">Awards &amp; Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Mobile Web Specialist - Google Certification</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              2<sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              3<sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005</li>
-          </ul>
-        </div>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber-ej">
+          <div class="my-auto">
+              <h2 class="mb-5">Ejemplos</h2>
+    
+              <div class="ejemplos d-flex flex-column flex-md-row mb-5">
+                  <div><a data-fancybox="gallery" href="img/inputnumber-ex-1-lightbox.png"><img src="img/inputnumber-ex-1-button.png"></a><br /><p class="boxed">W3Schools</p></div>
+                 
+                
+                
+                 </div>
       </section>
 
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/inputs.js"></script>
+<script src="js/konami.js"></script>
 
   </body>
 

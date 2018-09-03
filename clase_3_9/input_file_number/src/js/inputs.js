@@ -48,10 +48,7 @@ function fileUpload() {
 				}
 				if ('size' in file) {
 					txt += 'size: ' + file.size + ' bytes <br>';
-        }
-        if ('type' in file) {
-          text += 'type: ' + file.type + '<br>';
-        }
+				}
 			}
 		}
 	} else {
@@ -63,4 +60,10 @@ function fileUpload() {
 		}
 	}
 	document.getElementById('demo').innerHTML = txt;
+}
+
+// Convertidor de cms a pulgadas
+
+function LengthConverter(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*0.39370;
 }
