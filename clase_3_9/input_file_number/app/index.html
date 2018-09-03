@@ -187,17 +187,15 @@ Por favor elija un archivo de audio, video o imagen:</p>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Subir un archivo</h3>
               <hr />
               <form action="#"
 enctype="multipart/form-data" method="post">
 <p>
-Por favor elija un archivo de audio, video o imagen:</p>
-<p>
-  <input type="file" name="datafile" id="uploadedFile" accept="file_extension|audio/*|video/*|image/*|media_type" multiple onchange="fileUpload()">
+Convertidor, de centímetros a Pulgadas:</p><p>
+<input id="inputcm" type="number" placeholder="cm" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
 </p>
+<p>Pulgadas: <span id="outputInches"></span></p></p>
 <div>
-<input type="submit" value="Send" onclick="alert('Archivo subido!')">
 <input type="reset" value="Reset">
 </div>
 </form>
@@ -208,7 +206,7 @@ Por favor elija un archivo de audio, video o imagen:</p>
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Cómo implementar</h3>
 <p>&nbsp;</p>
-              <script src="https://gist.github.com/gusma/c424d0bc7fee9e6161c9f9d9d45adee0.js"></script>
+<script src="https://gist.github.com/gusma/bd8a0f924f470509c3b0bc45cf1e8240.js"></script>
               
 </div></div>          
         </div>
