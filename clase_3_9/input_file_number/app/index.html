@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Input File / Input Number</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
+
+    <link href="css/inputs.min.css" rel="stylesheet">
+
+    
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">display: flex;
+            flex-wrap: wrap;</span>
+        <span class="d-none d-lg-block">
+       <!--   <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>-->
+      </a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputfile">Input File</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputfile-imp">Implementación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputfile-ej">Ejemplos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputnumber">Imput Number</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputnumber-imp">Implementación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inputnumber-ej">Ejemplos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="main">
+        <div class="my-auto">
+          <h1 class="mb-0">INPUT
+            <span class="text-primary">FILE</span> &amp; <span class="text-primary">NUMBER</span>
+          </h1>
+          <div class="subheading mb-5">Gustavo &amp; Juan Ignacio.</a>
+          </div>
+          <p class="lead mb-5">Para ver los ejemplos, por favor avance al <a href="#">siguiente slide >></a></p>
+          <div class="social-icons">
+           
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+           </div>
+        
+           <p>&nbsp;</p>
+           <hr />
+           <p><small>Conocés el Konami Code? Probalo en este sitio! ↑ ↑ ↓ ↓ ← → ← → B A</small></p>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="inputfile">
+        <div class="my-auto">
+          <h1 class="mb-0">INPUT
+            <span class="text-primary">FILE</span>
+          </h1>
+          <div class="subheading mb-5">Suba archivos por medio de un formulario.
+          </div>
+          <p class="lead mb-5">Input File es un elemento de entre los más viejos en existencia en HTML. Consiste en la idea que un usuario puede elegir y subir uno o múltiples archivos por medio de un formulario a un destino determinado.</p>
+         <p>El proceder es: El elemento file abre un elemento para elegir uno (o múltiples, si se incluye el atributo <i>Multiple</i> dentro del picker, y de acuerdo a esos archivos y el botón "Submit" procede a activar el proceso seleccionado por el "post"del formulario.</p>
+         <p>&nbsp;</p> 
+         <h3 class="mb-3">Atributos modificables</h3>
+         <ul class="attributes"><li><span class="boxed">Multiple</span> como parametro para múltiples archivos. (No agregar si es solo uno)</li>
+        <li><span class="boxed">Size</span> - Seguido por valor numérico integer </li>
+      <li><span class="boxed">Accept</span> - Qué tipos de archivos está dispuesto a aceptar el formulario (<code>accept="file_extension|audio/*|video/*|image/*|media_type")</code>. Acepta todos los tipos de archivo <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">reconocidos por IANA</a>.</li></ul> </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputfile-imp">
+        <div class="my-auto">
+          <h2 class="mb-5">Ejemplo de Implementación</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Subir un archivo</h3>
+              <hr />
+              <form action="#"
+enctype="multipart/form-data" method="post">
+<p>
+Por favor elija un archivo de audio, video o imagen:</p>
+<p>
+  <input type="file" name="datafile" id="uploadedFile" accept="file_extension|audio/*|video/*|image/*|media_type" multiple onchange="fileUpload()">
+</p>
+<div>
+<input type="submit" value="Send" onclick="alert('Archivo subido!')">
+<input type="reset" value="Reset">
+</div>
+</form>
+<p id="demo"></p>
+            </div>
+          </div>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Cómo implementar</h3>
+<p>&nbsp;</p>
+              <script src="https://gist.github.com/gusma/c424d0bc7fee9e6161c9f9d9d45adee0.js"></script>
+              
+</div></div>          
+        </div>
+
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputfile-ej">
+        <div class="my-auto">
+          <h2 class="mb-5">Ejemplos</h2>
+
+          <div class="ejemplos d-flex flex-column flex-md-row mb-5">
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-1-lightbox.png"><img src="img/inputfile-ex-1-button.png"></a><br /><p class="boxed">Dropbox</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-2-lightbox.gif"><img src="img/inputfile-ex-2-button.png"></a><br /><p class="boxed">Gmail</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-3-lightbox.gif"><img src="img/inputfile-ex-3-button.png"></a><br /><p class="boxed">MDBootstrap.com</p></div>
+              <div><a data-fancybox="gallery" href="img/inputfile-ex-4-lightbox.gif"><img src="img/inputfile-ex-4-button.png"></a><br /><p class="boxed">Twitter</p></div>
+            
+            
+             </div>
+          
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+           
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber">
+        <div class="my-auto">
+          <h1 class="mb-0">INPUT
+            <span class="text-primary">NUMBER</span>
+          </h1>
+          <div class="subheading mb-5">Haga operaciones numéricas por medio de un formulario.
+          </div>
+          <p class="lead mb-5">Input Number consiste en un input de tipo numérico, sea con un principio y un fin establecido, o un valor libre. (Cualquier elemento es válido siempre y cuando sea un elemento numérico.)</p>
+         <h3 class="mb-3">Atributos modificables</h3>
+         <ul class="attributes"><li><span class="boxed">Min</span> como valor numérico mínimo.</li>
+        <li><span class="boxed">Max</span> como valor numérico máximo. </li>
+      <li><span class="boxed">Step</span> - La propiedad step permite el aumento o disminución de un número incrementalmente por valores (por ejemplo, un valor <code>step="10"</code> permitiría agregar o quitar números de a 10 por vez.)</li></ul> </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber-imp">
+        <div class="my-auto">
+          <h2 class="mb-5">Ejemplo de Implementación</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Subir un archivo</h3>
+              <hr />
+              <form action="#"
+enctype="multipart/form-data" method="post">
+<p>
+Por favor elija un archivo de audio, video o imagen:</p>
+<p>
+  <input type="file" name="datafile" id="uploadedFile" accept="file_extension|audio/*|video/*|image/*|media_type" multiple onchange="fileUpload()">
+</p>
+<div>
+<input type="submit" value="Send" onclick="alert('Archivo subido!')">
+<input type="reset" value="Reset">
+</div>
+</form>
+<p id="demo"></p>
+            </div>
+          </div>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Cómo implementar</h3>
+<p>&nbsp;</p>
+              <script src="https://gist.github.com/gusma/c424d0bc7fee9e6161c9f9d9d45adee0.js"></script>
+              
+</div></div>          
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="inputnumber-ej">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Google Analytics Certified Developer</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Mobile Web Specialist - Google Certification</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              2<sup>nd</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - James Buchanan High School - Hackathon 2006</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              3<sup>rd</sup>
+              Place - James Buchanan High School - Hackathon 2005</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/inputs.js"></script>
+<script src="js/konami.js"></script>
+
+  </body>
+
+</html>
